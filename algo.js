@@ -297,3 +297,35 @@ quickSort([4, 8, 2, 1, 5, 7, 6, 3]);
 // 9 = 9637
 
 //Result = [4, 7, 29, 86, 408, 593, 902, 1556, 3556, 4386, 8157, 9637]
+function getDigit(num, i) {
+    return Math.floor(Math.abs(num)/ Math.pow(10, i)) % 10;
+}
+
+function digitCount(num) {
+    if (num === 0) return 1;
+    return Math.floor(Math.log10(Math.abs(num))) + 1;
+}
+
+function moreDigits(nums) {
+    let maxDigits = 0;
+    for (let i = 0; i < nums.length; i++) {
+        maxDigits = Math.max(maxDigits, digitCount(nums[i]));
+    }
+    return maxDigits;
+}
+
+function radixSort(nums) {
+    let maxDigits = moreDigits(nums);
+    for (let k = 0; k < maxDigits; k++) {
+        let digitBuckets = Array.from({length: 10}, () => [])
+        for (let i = 0; i < nums.length; i++) {
+            digitBuckets[getDigit(nums[i], k)].push(nums[i]);
+        }
+        console.log(digitBuckets);
+        nums = [].concat(...digitBuckets);
+        console.log(nums);
+    }
+}
+
+radixSort([1556, 4, 3556, 593, 408, 4386, 902, 7, 8157, 86, 9637, 29]);
+
