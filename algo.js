@@ -4,7 +4,7 @@
 # 2. Binary Search:
 # 3. Bubble Sort:
 
-// O(n)
+// O(n), If we use for inside for it will be O(n^2)
 function bubbleSort(arr) {
     var noSwap = true;
     for (var i = 0; i < arr.length; i++) {
@@ -23,7 +23,7 @@ bubbleSort([4, 6, 3, 9, 2, 0, 1]);
 
 # 4. Insertion Sort:
 
-// O(n)
+// O(n), If we use for inside for it will be O(n^2)
 function insertionSort(arr) {
     var noSwap = true;
     var startPoint = 0;
@@ -61,7 +61,7 @@ insertionSort([6, 8, 4, 3, 2, 0, 1]);
 // [0, 1, 2, 3, 4, 6, 8]
 //                    i
 
-O(n2)
+// O(n), If we use for inside for it will be O(n^2)
 function insertionSort (arr) {
      for(var i= 1; i < arr.length; i++) {
          var currentVal = arr[i];
@@ -77,7 +77,7 @@ insertionSort([6, 8, 4, 3, 2, 0, 1]);
 
 # 5. Selection Sort:
 
-// O(n)
+// O(n), If we use for inside for it will be O(n^2)
 function selectionSort(arr) {
     var noSwap = true;
     var startPoint = 0;
@@ -129,7 +129,7 @@ selectionSort([8, 5, 3, 9, 2, 1]);
 
 # 6. Merge Sort:
 
-// O(n)
+// O(n log n)
 // Sorted arrays merge sort algorithm
 function merge (arr1, arr2) {
     let result = [];
@@ -179,7 +179,7 @@ mergeSort([10, 24, 76, 73, 72, 1, 9]);
 
 # 7. Quick Sort:
 
-// O(n)
+// O(n log n)
 function pivot(arr, start = 0, end = arr.length + 1) {
     let pivot = arr[start];
     let swapIndex = start;
@@ -213,13 +213,13 @@ quickSort([4, 8, 2, 1, 5, 7, 6, 3]);
 // [4, 8, 2, 1, 5, 7, 6, 3]
 //  p
 // [4, 8, 2, 1, 5, 7, 6, 3]
-//  p  sw
+//  p  swapIndex
 // [4, 2, 8, 1, 5, 7, 6, 3]
-//  p     sw
+//  pivot swapIndex
 // [4, 2, 1, 8, 5, 7, 6, 3]
-//  p        sw
+//  pivot    swapIndex
 // [4, 2, 1, 3, 5, 7, 6, 8]
-//  p        sw
+// pivot     swapIndex
 
 // [4, 2, 1, 3, 5, 7, 6, 8]
 // [3, 2, 1, 4, 5, 7, 6, 8]
@@ -234,4 +234,4 @@ quickSort([4, 8, 2, 1, 5, 7, 6, 3]);
 // [1, 2, 3] [4] [5, 6, 7, 8]
 // [1, 2, 3] [4] [5, 6, 7, 8]
 
-# 8. Redix Sort:
+# 8. Radix Sort:
