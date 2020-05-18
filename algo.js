@@ -297,6 +297,8 @@ quickSort([4, 8, 2, 1, 5, 7, 6, 3]);
 // 9 = 9637
 
 //Result = [4, 7, 29, 86, 408, 593, 902, 1556, 3556, 4386, 8157, 9637]
+
+// O(nk) where k is number of digits(average)
 function getDigit(num, i) {
     return Math.floor(Math.abs(num)/ Math.pow(10, i)) % 10;
 }
