@@ -21,6 +21,13 @@ function bubbleSort(arr) {
 
 bubbleSort([4, 6, 3, 9, 2, 0, 1]);
 
+// [4, 3, 6, 2, 0, 1, 9]
+// [3, 4, 2, 0, 1, 6, 9]
+// [3, 2, 0, 1, 4, 6, 9]
+// [2, 0, 1, 3, 4, 6, 9]
+// [0, 1, 2, 3, 4, 6, 9]
+// [0, 1, 2, 3, 4, 6, 9]
+
 # 4. Insertion Sort:
 
 // O(n), If we use for inside for it will be O(n^2)
