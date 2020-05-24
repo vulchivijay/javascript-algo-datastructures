@@ -121,10 +121,9 @@ class SingleLinkedList {
 
     // Remove method - removing a node from the linked list at specific position
     remove(index) {
-        var counter = 0;
         var current = this.head;
         var prevNode = this.get(index - 1);
-        var nextNode, removedNode;
+        var removedNode;
 
         if (index < 0 || index >= this.length) return "Out of range!!!";
         if (index === 0) return this.shift();
@@ -136,6 +135,8 @@ class SingleLinkedList {
         this.length--;
         return this;
     }
+
+    // Reverse method - 
 
     // traverse/show the lsit.
     traverse() {
